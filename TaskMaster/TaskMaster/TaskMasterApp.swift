@@ -27,5 +27,24 @@ struct TaskMasterApp: App {
                 }
             }
         }
+        
+        WindowGroup("Special Window") {
+            Text("Special window")
+                .frame(minWidth: 200, idealWidth: 300, minHeight: 200)
+        }
+        .defaultPosition(.leading)
+        
+        Settings {
+            Text("Settings")
+                .frame(minWidth: 500, maxWidth: .infinity, minHeight: 600, maxHeight: .infinity)
+        }
+        
+        MenuBarExtra("TaskMaster") {
+            Button(action: {
+                
+            }, label: {
+                Text("Do something awesome!")
+            })
+        }
     }
 }

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TaskView: View {
     
+    @Environment(\.openWindow) var openWindow
+    
     @Binding var task: Task
-    
     @Binding var selectedTask: Task?
-    
     @Binding var inspectorIsVisible: Bool
     
     var body: some View {

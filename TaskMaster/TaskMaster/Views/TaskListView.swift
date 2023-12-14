@@ -18,6 +18,7 @@ struct TaskListView: View {
         List($tasks) { $task in
             TaskView(task: $task, selectedTask: $selectedTask, inspectorIsVisible: $inspectorIsVisible)
         }
+        .navigationTitle(title)
         .toolbar {
             ToolbarItemGroup {
                 Button(action: {
@@ -34,12 +35,15 @@ struct TaskListView: View {
             }
         }
         .inspector(isPresented: $inspectorIsVisible) {
-            if let selectedTask {
-                Text(selectedTask.title)
-                    .font(.title)
-            } else {
-                Text("No details to show")
+            Group {
+                if let selectedTask {
+                    Text(selectedTask.title)
+                        .font(.title)
+                } else {
+                    Text("No details to show")
+                }
             }
+            .frame(minWidth: 100, maxWidth: .infinity)
         }
     }
 }
