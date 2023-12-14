@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SidebarView: View {
     
-    let userGroups: [TaskGroup]
+    @Binding var userGroups: [TaskGroup]
     @Binding var selection: TaskSection
     
     var body: some View {
@@ -22,16 +22,32 @@ struct SidebarView: View {
             }
             
             Section("My Groups") {
-                ForEach(userGroups) { group in
-                    Label(group.title, systemImage: "folder")
-                        .tag(TaskSection.list(group))
+                ForEach($userGroups) { $group in
+                    HStack {
+                        Image(systemName: "folder")
+                        TextField("New Group", text: $group.title)
+                    }
                 }
             }
         }
+        .safeAreaInset(edge: .bottom) {
+            Button(action: {
+                let newGroup = TaskGroup(title: "New Group")
+                userGroups.append(newGroup)
+            }, label: {
+                Label("Add Group", systemImage: "plus.circle")
+            })
+            .buttonStyle(.borderless)
+            .foregroundStyle(Color.accentColor)
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .keyboardShortcut(KeyEquivalent("a"), modifiers: .command)
+        }
+        
     }
 }
 
 #Preview {
-    SidebarView(userGroups: TaskGroup.examples(), selection: .constant(.all))
+    SidebarView(userGroups: .constant(TaskGroup.examples()), selection: .constant(.all))
         .listStyle(.sidebar)
 }
