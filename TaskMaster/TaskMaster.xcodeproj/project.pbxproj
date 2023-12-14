@@ -11,6 +11,11 @@
 		6ED6D31B2B2B862100A04E78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6D31A2B2B862100A04E78 /* ContentView.swift */; };
 		6ED6D31D2B2B862200A04E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED6D31C2B2B862200A04E78 /* Assets.xcassets */; };
 		6ED6D3202B2B862200A04E78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED6D31F2B2B862200A04E78 /* Preview Assets.xcassets */; };
+		6ED6D3292B2B869500A04E78 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6D3282B2B869500A04E78 /* Task.swift */; };
+		6ED6D32B2B2B94B500A04E78 /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6D32A2B2B94B500A04E78 /* TaskGroup.swift */; };
+		6ED6D32D2B2B95D000A04E78 /* TaskSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6D32C2B2B95D000A04E78 /* TaskSection.swift */; };
+		6ED6D3302B2B97A400A04E78 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6D32F2B2B97A400A04E78 /* SidebarView.swift */; };
+		6ED6D3322B2B97BE00A04E78 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6D3312B2B97BE00A04E78 /* TaskListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		6ED6D31C2B2B862200A04E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ED6D31F2B2B862200A04E78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6ED6D3212B2B862200A04E78 /* TaskMaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskMaster.entitlements; sourceTree = "<group>"; };
+		6ED6D3282B2B869500A04E78 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		6ED6D32A2B2B94B500A04E78 /* TaskGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroup.swift; sourceTree = "<group>"; };
+		6ED6D32C2B2B95D000A04E78 /* TaskSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSection.swift; sourceTree = "<group>"; };
+		6ED6D32F2B2B97A400A04E78 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		6ED6D3312B2B97BE00A04E78 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,8 @@
 		6ED6D3172B2B862100A04E78 /* TaskMaster */ = {
 			isa = PBXGroup;
 			children = (
+				6ED6D32E2B2B979000A04E78 /* Views */,
+				6ED6D3272B2B868100A04E78 /* Models */,
 				6ED6D3182B2B862100A04E78 /* TaskMasterApp.swift */,
 				6ED6D31A2B2B862100A04E78 /* ContentView.swift */,
 				6ED6D31C2B2B862200A04E78 /* Assets.xcassets */,
@@ -67,6 +79,25 @@
 				6ED6D31F2B2B862200A04E78 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6ED6D3272B2B868100A04E78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6ED6D3282B2B869500A04E78 /* Task.swift */,
+				6ED6D32A2B2B94B500A04E78 /* TaskGroup.swift */,
+				6ED6D32C2B2B95D000A04E78 /* TaskSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6ED6D32E2B2B979000A04E78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6ED6D32F2B2B97A400A04E78 /* SidebarView.swift */,
+				6ED6D3312B2B97BE00A04E78 /* TaskListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED6D3322B2B97BE00A04E78 /* TaskListView.swift in Sources */,
 				6ED6D31B2B2B862100A04E78 /* ContentView.swift in Sources */,
+				6ED6D3292B2B869500A04E78 /* Task.swift in Sources */,
+				6ED6D32D2B2B95D000A04E78 /* TaskSection.swift in Sources */,
+				6ED6D32B2B2B94B500A04E78 /* TaskGroup.swift in Sources */,
 				6ED6D3192B2B862100A04E78 /* TaskMasterApp.swift in Sources */,
+				6ED6D3302B2B97A400A04E78 /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
