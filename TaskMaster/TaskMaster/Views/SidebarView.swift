@@ -27,6 +27,14 @@ struct SidebarView: View {
                         Image(systemName: "folder")
                         TextField("New Group", text: $group.title)
                     }
+                    .tag(TaskSection.list(group))
+                    .contextMenu {
+                        Button("Delete", role: .destructive) {
+                            if let index = userGroups.firstIndex(where: { $0.id == group.id }) {
+                                userGroups.remove(at: index)
+                            }
+                        }
+                    }
                 }
             }
         }
