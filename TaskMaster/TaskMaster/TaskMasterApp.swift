@@ -38,13 +38,10 @@ struct TaskMasterApp: App {
             Text("Settings")
                 .frame(minWidth: 500, maxWidth: .infinity, minHeight: 600, maxHeight: .infinity)
         }
-        
-        MenuBarExtra("TaskMaster") {
-            Button(action: {
-                
-            }, label: {
-                Text("Do something awesome!")
-            })
+        MenuBarExtra {
+            Text("Future Items")
+        } label: {
+            Label("TaskMaster", systemImage: "circle.inset.filled")
         }
     }
 }
